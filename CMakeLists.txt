@@ -25,14 +25,21 @@ find_package(G2O REQUIRED)
 include_directories(${G2O_INCLUDE_DIRS})
 message(WARNING "G2O include directories: ${G2O_INCLUDE_DIRS}")
 
+# OpenCV
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 message(WARNING "OpenCV include directories: ${OpenCV_INCLUDE_DIRS}")
+
+# Glog
+find_package(Glog REQUIRED)
+include_directories(${GLOG_INCLUDE_DIRS})
+message(WARNING "GLOG_LIBRARIES include directories: ${GLOG_LIBRARIES}")
 
 set(THIRD_PARTY_LIBS 
         ${OpenCV_LIBS}
         ${G2O_CORE_LIBRARY}
         ${G2O_STUFF_LIBRARY}
+        glog::glog
         )
 # --------------------------------
 
