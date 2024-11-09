@@ -44,5 +44,8 @@ set(THIRD_PARTY_LIBS
 # --------------------------------
 
 
-# add_subdirectory(src)
+
+include_directories(${PROJECT_SOURCE_DIR}/include)
+add_subdirectory(src)
 add_subdirectory(test)
+add_subdirectory(app)
