@@ -97,16 +97,64 @@ src/CMakeFiles/myslam.dir/config.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/myslam.dir/config.cpp.s"
 	cd /home/liuiu/桌面/slam/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/liuiu/桌面/slam/src/config.cpp -o CMakeFiles/myslam.dir/config.cpp.s
 
+src/CMakeFiles/myslam.dir/dataset.cpp.o: src/CMakeFiles/myslam.dir/flags.make
+src/CMakeFiles/myslam.dir/dataset.cpp.o: /home/liuiu/桌面/slam/src/dataset.cpp
+src/CMakeFiles/myslam.dir/dataset.cpp.o: src/CMakeFiles/myslam.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/liuiu/桌面/slam/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/myslam.dir/dataset.cpp.o"
+	cd /home/liuiu/桌面/slam/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/myslam.dir/dataset.cpp.o -MF CMakeFiles/myslam.dir/dataset.cpp.o.d -o CMakeFiles/myslam.dir/dataset.cpp.o -c /home/liuiu/桌面/slam/src/dataset.cpp
+
+src/CMakeFiles/myslam.dir/dataset.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/myslam.dir/dataset.cpp.i"
+	cd /home/liuiu/桌面/slam/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/liuiu/桌面/slam/src/dataset.cpp > CMakeFiles/myslam.dir/dataset.cpp.i
+
+src/CMakeFiles/myslam.dir/dataset.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/myslam.dir/dataset.cpp.s"
+	cd /home/liuiu/桌面/slam/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/liuiu/桌面/slam/src/dataset.cpp -o CMakeFiles/myslam.dir/dataset.cpp.s
+
+src/CMakeFiles/myslam.dir/camera.cpp.o: src/CMakeFiles/myslam.dir/flags.make
+src/CMakeFiles/myslam.dir/camera.cpp.o: /home/liuiu/桌面/slam/src/camera.cpp
+src/CMakeFiles/myslam.dir/camera.cpp.o: src/CMakeFiles/myslam.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/liuiu/桌面/slam/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/myslam.dir/camera.cpp.o"
+	cd /home/liuiu/桌面/slam/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/myslam.dir/camera.cpp.o -MF CMakeFiles/myslam.dir/camera.cpp.o.d -o CMakeFiles/myslam.dir/camera.cpp.o -c /home/liuiu/桌面/slam/src/camera.cpp
+
+src/CMakeFiles/myslam.dir/camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/myslam.dir/camera.cpp.i"
+	cd /home/liuiu/桌面/slam/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/liuiu/桌面/slam/src/camera.cpp > CMakeFiles/myslam.dir/camera.cpp.i
+
+src/CMakeFiles/myslam.dir/camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/myslam.dir/camera.cpp.s"
+	cd /home/liuiu/桌面/slam/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/liuiu/桌面/slam/src/camera.cpp -o CMakeFiles/myslam.dir/camera.cpp.s
+
+src/CMakeFiles/myslam.dir/frontend.cpp.o: src/CMakeFiles/myslam.dir/flags.make
+src/CMakeFiles/myslam.dir/frontend.cpp.o: /home/liuiu/桌面/slam/src/frontend.cpp
+src/CMakeFiles/myslam.dir/frontend.cpp.o: src/CMakeFiles/myslam.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/liuiu/桌面/slam/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/myslam.dir/frontend.cpp.o"
+	cd /home/liuiu/桌面/slam/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/myslam.dir/frontend.cpp.o -MF CMakeFiles/myslam.dir/frontend.cpp.o.d -o CMakeFiles/myslam.dir/frontend.cpp.o -c /home/liuiu/桌面/slam/src/frontend.cpp
+
+src/CMakeFiles/myslam.dir/frontend.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/myslam.dir/frontend.cpp.i"
+	cd /home/liuiu/桌面/slam/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/liuiu/桌面/slam/src/frontend.cpp > CMakeFiles/myslam.dir/frontend.cpp.i
+
+src/CMakeFiles/myslam.dir/frontend.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/myslam.dir/frontend.cpp.s"
+	cd /home/liuiu/桌面/slam/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/liuiu/桌面/slam/src/frontend.cpp -o CMakeFiles/myslam.dir/frontend.cpp.s
+
 # Object files for target myslam
 myslam_OBJECTS = \
 "CMakeFiles/myslam.dir/visual_odometry.cpp.o" \
-"CMakeFiles/myslam.dir/config.cpp.o"
+"CMakeFiles/myslam.dir/config.cpp.o" \
+"CMakeFiles/myslam.dir/dataset.cpp.o" \
+"CMakeFiles/myslam.dir/camera.cpp.o" \
+"CMakeFiles/myslam.dir/frontend.cpp.o"
 
 # External object files for target myslam
 myslam_EXTERNAL_OBJECTS =
 
 src/libmyslam.so: src/CMakeFiles/myslam.dir/visual_odometry.cpp.o
 src/libmyslam.so: src/CMakeFiles/myslam.dir/config.cpp.o
+src/libmyslam.so: src/CMakeFiles/myslam.dir/dataset.cpp.o
+src/libmyslam.so: src/CMakeFiles/myslam.dir/camera.cpp.o
+src/libmyslam.so: src/CMakeFiles/myslam.dir/frontend.cpp.o
 src/libmyslam.so: src/CMakeFiles/myslam.dir/build.make
 src/libmyslam.so: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.4.6.0
 src/libmyslam.so: /usr/lib/x86_64-linux-gnu/libopencv_alphamat.so.4.6.0
@@ -168,7 +216,7 @@ src/libmyslam.so: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0
 src/libmyslam.so: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
 src/libmyslam.so: /usr/lib/x86_64-linux-gnu/libgflags.so.2.2.2
 src/libmyslam.so: src/CMakeFiles/myslam.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/liuiu/桌面/slam/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libmyslam.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/liuiu/桌面/slam/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library libmyslam.so"
 	cd /home/liuiu/桌面/slam/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/myslam.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

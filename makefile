@@ -1,7 +1,5 @@
-# Makefile
-
 # 定义目标
-.PHONY: clean setup
+.PHONY: clean setup build all
 
 # 删除build目录
 clean:
@@ -11,5 +9,9 @@ clean:
 setup: clean
 	mkdir build
 
-# 默认执行setup
-all: setup
+# 编译
+build: setup
+	@cd build && cmake .. && make && cd ..
+
+# 默认执行编译
+all: build

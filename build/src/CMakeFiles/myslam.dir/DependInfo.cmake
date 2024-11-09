@@ -8,7 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/liuiu/桌面/slam/src/camera.cpp" "src/CMakeFiles/myslam.dir/camera.cpp.o" "gcc" "src/CMakeFiles/myslam.dir/camera.cpp.o.d"
   "/home/liuiu/桌面/slam/src/config.cpp" "src/CMakeFiles/myslam.dir/config.cpp.o" "gcc" "src/CMakeFiles/myslam.dir/config.cpp.o.d"
+  "/home/liuiu/桌面/slam/src/dataset.cpp" "src/CMakeFiles/myslam.dir/dataset.cpp.o" "gcc" "src/CMakeFiles/myslam.dir/dataset.cpp.o.d"
+  "/home/liuiu/桌面/slam/src/frontend.cpp" "src/CMakeFiles/myslam.dir/frontend.cpp.o" "gcc" "src/CMakeFiles/myslam.dir/frontend.cpp.o.d"
   "/home/liuiu/桌面/slam/src/visual_odometry.cpp" "src/CMakeFiles/myslam.dir/visual_odometry.cpp.o" "gcc" "src/CMakeFiles/myslam.dir/visual_odometry.cpp.o.d"
   )
 

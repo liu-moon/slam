@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
+  "/home/liuiu/桌面/slam/bin/run_kitti_stereo"
+  "/home/liuiu/桌面/slam/bin/run_kitti_stereo.pdb"
   "CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o"
   "CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o.d"
-  "run_kitti_stereo"
-  "run_kitti_stereo.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

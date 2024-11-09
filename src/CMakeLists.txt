@@ -1,6 +1,9 @@
 add_library(myslam SHARED
         visual_odometry.cpp
         config.cpp
+        dataset.cpp
+        camera.cpp
+        frontend.cpp
         )
 
 target_link_libraries(myslam

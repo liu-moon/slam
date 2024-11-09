@@ -3,6 +3,7 @@
 
 #include "myslam/common_include.h"
 #include "myslam/dataset.h"
+#include "myslam/frontend.h"
 
 class VisualOdometry
 {

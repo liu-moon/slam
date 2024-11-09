@@ -440,5 +440,21 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: \
  /usr/local/glog/include/glog/types.h \
  /usr/local/glog/include/glog/log_severity.h \
  /usr/local/glog/include/glog/vlog_is_on.h \
+ /usr/local/include/sophus/se3.hpp /usr/local/include/sophus/so3.hpp \
+ /usr/local/include/sophus/rotation_matrix.hpp \
+ /usr/include/eigen3/Eigen/SVD /usr/local/include/sophus/types.hpp \
+ /usr/local/include/sophus/common.hpp /usr/include/c++/13/optional \
+ /usr/include/c++/13/random /usr/include/c++/13/bits/random.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h \
+ /usr/include/c++/13/bits/random.tcc /usr/include/c++/13/numeric \
+ /usr/include/c++/13/bits/stl_numeric.h \
+ /usr/include/c++/13/pstl/glue_numeric_defs.h \
+ /usr/local/include/sophus/so2.hpp /usr/include/eigen3/Eigen/LU \
  /home/liuiu/桌面/slam/include/myslam/dataset.h \
+ /home/liuiu/桌面/slam/include/myslam/camera.h \
+ /home/liuiu/桌面/slam/include/myslam/frontend.h \
+ /usr/include/opencv4/opencv2/features2d.hpp \
+ /usr/include/opencv4/opencv2/flann/miniflann.hpp \
+ /usr/include/opencv4/opencv2/flann/defines.h \
+ /usr/include/opencv4/opencv2/flann/config.h \
  /home/liuiu/桌面/slam/include/myslam/config.h

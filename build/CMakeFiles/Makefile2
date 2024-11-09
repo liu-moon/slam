@@ -134,12 +134,12 @@ test/clean: test/CMakeFiles/test_glog.dir/clean
 src/CMakeFiles/myslam.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/myslam.dir/build.make src/CMakeFiles/myslam.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/myslam.dir/build.make src/CMakeFiles/myslam.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/liuiu/桌面/slam/build/CMakeFiles --progress-num=1,2,3 "Built target myslam"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/liuiu/桌面/slam/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target myslam"
 .PHONY : src/CMakeFiles/myslam.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/myslam.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/liuiu/桌面/slam/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/liuiu/桌面/slam/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/myslam.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/liuiu/桌面/slam/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/myslam.dir/rule
@@ -160,7 +160,7 @@ src/CMakeFiles/myslam.dir/clean:
 test/CMakeFiles/test_g2o.dir/all:
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_g2o.dir/build.make test/CMakeFiles/test_g2o.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_g2o.dir/build.make test/CMakeFiles/test_g2o.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/liuiu/桌面/slam/build/CMakeFiles --progress-num=6,7 "Built target test_g2o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/liuiu/桌面/slam/build/CMakeFiles --progress-num=9,10 "Built target test_g2o"
 .PHONY : test/CMakeFiles/test_g2o.dir/all
 
 # Build rule for subdir invocation for target.
@@ -186,7 +186,7 @@ test/CMakeFiles/test_g2o.dir/clean:
 test/CMakeFiles/test_glog.dir/all:
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_glog.dir/build.make test/CMakeFiles/test_glog.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_glog.dir/build.make test/CMakeFiles/test_glog.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/liuiu/桌面/slam/build/CMakeFiles --progress-num=8,9 "Built target test_glog"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/liuiu/桌面/slam/build/CMakeFiles --progress-num=11,12 "Built target test_glog"
 .PHONY : test/CMakeFiles/test_glog.dir/all
 
 # Build rule for subdir invocation for target.
@@ -212,12 +212,12 @@ test/CMakeFiles/test_glog.dir/clean:
 app/CMakeFiles/run_kitti_stereo.dir/all: src/CMakeFiles/myslam.dir/all
 	$(MAKE) $(MAKESILENT) -f app/CMakeFiles/run_kitti_stereo.dir/build.make app/CMakeFiles/run_kitti_stereo.dir/depend
 	$(MAKE) $(MAKESILENT) -f app/CMakeFiles/run_kitti_stereo.dir/build.make app/CMakeFiles/run_kitti_stereo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/liuiu/桌面/slam/build/CMakeFiles --progress-num=4,5 "Built target run_kitti_stereo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/liuiu/桌面/slam/build/CMakeFiles --progress-num=7,8 "Built target run_kitti_stereo"
 .PHONY : app/CMakeFiles/run_kitti_stereo.dir/all
 
 # Build rule for subdir invocation for target.
 app/CMakeFiles/run_kitti_stereo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/liuiu/桌面/slam/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/liuiu/桌面/slam/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/CMakeFiles/run_kitti_stereo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/liuiu/桌面/slam/build/CMakeFiles 0
 .PHONY : app/CMakeFiles/run_kitti_stereo.dir/rule

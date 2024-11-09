@@ -10,11 +10,11 @@ bool VisualOdometry::Init() {
         return false;
     }
 
-    // dataset_ =
-    //     Dataset::Ptr(new Dataset(Config::Get<std::string>("dataset_dir")));
-    // CHECK_EQ(dataset_->Init(), true);
+    dataset_ =  Dataset::Ptr(new Dataset(Config::Get<std::string>("dataset_dir"))); // 返回string类型的变量
+    CHECK_EQ(dataset_->Init(), true);   // CHECK_EQ 判断是否初始化成功
 
-    // // create components and links
+    // create components and links
+    // 创建组件和链接
     // frontend_ = Frontend::Ptr(new Frontend);
     // backend_ = Backend::Ptr(new Backend);
     // map_ = Map::Ptr(new Map);

@@ -130,6 +130,30 @@ myslam/fast:
 	cd /home/liuiu/桌面/slam/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/myslam.dir/build.make src/CMakeFiles/myslam.dir/build
 .PHONY : myslam/fast
 
+camera.o: camera.cpp.o
+.PHONY : camera.o
+
+# target to build an object file
+camera.cpp.o:
+	cd /home/liuiu/桌面/slam/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/myslam.dir/build.make src/CMakeFiles/myslam.dir/camera.cpp.o
+.PHONY : camera.cpp.o
+
+camera.i: camera.cpp.i
+.PHONY : camera.i
+
+# target to preprocess a source file
+camera.cpp.i:
+	cd /home/liuiu/桌面/slam/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/myslam.dir/build.make src/CMakeFiles/myslam.dir/camera.cpp.i
+.PHONY : camera.cpp.i
+
+camera.s: camera.cpp.s
+.PHONY : camera.s
+
+# target to generate assembly for a file
+camera.cpp.s:
+	cd /home/liuiu/桌面/slam/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/myslam.dir/build.make src/CMakeFiles/myslam.dir/camera.cpp.s
+.PHONY : camera.cpp.s
+
 config.o: config.cpp.o
 .PHONY : config.o
 
@@ -153,6 +177,54 @@ config.s: config.cpp.s
 config.cpp.s:
 	cd /home/liuiu/桌面/slam/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/myslam.dir/build.make src/CMakeFiles/myslam.dir/config.cpp.s
 .PHONY : config.cpp.s
+
+dataset.o: dataset.cpp.o
+.PHONY : dataset.o
+
+# target to build an object file
+dataset.cpp.o:
+	cd /home/liuiu/桌面/slam/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/myslam.dir/build.make src/CMakeFiles/myslam.dir/dataset.cpp.o
+.PHONY : dataset.cpp.o
+
+dataset.i: dataset.cpp.i
+.PHONY : dataset.i
+
+# target to preprocess a source file
+dataset.cpp.i:
+	cd /home/liuiu/桌面/slam/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/myslam.dir/build.make src/CMakeFiles/myslam.dir/dataset.cpp.i
+.PHONY : dataset.cpp.i
+
+dataset.s: dataset.cpp.s
+.PHONY : dataset.s
+
+# target to generate assembly for a file
+dataset.cpp.s:
+	cd /home/liuiu/桌面/slam/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/myslam.dir/build.make src/CMakeFiles/myslam.dir/dataset.cpp.s
+.PHONY : dataset.cpp.s
+
+frontend.o: frontend.cpp.o
+.PHONY : frontend.o
+
+# target to build an object file
+frontend.cpp.o:
+	cd /home/liuiu/桌面/slam/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/myslam.dir/build.make src/CMakeFiles/myslam.dir/frontend.cpp.o
+.PHONY : frontend.cpp.o
+
+frontend.i: frontend.cpp.i
+.PHONY : frontend.i
+
+# target to preprocess a source file
+frontend.cpp.i:
+	cd /home/liuiu/桌面/slam/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/myslam.dir/build.make src/CMakeFiles/myslam.dir/frontend.cpp.i
+.PHONY : frontend.cpp.i
+
+frontend.s: frontend.cpp.s
+.PHONY : frontend.s
+
+# target to generate assembly for a file
+frontend.cpp.s:
+	cd /home/liuiu/桌面/slam/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/myslam.dir/build.make src/CMakeFiles/myslam.dir/frontend.cpp.s
+.PHONY : frontend.cpp.s
 
 visual_odometry.o: visual_odometry.cpp.o
 .PHONY : visual_odometry.o
@@ -187,9 +259,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... myslam"
+	@echo "... camera.o"
+	@echo "... camera.i"
+	@echo "... camera.s"
 	@echo "... config.o"
 	@echo "... config.i"
 	@echo "... config.s"
+	@echo "... dataset.o"
+	@echo "... dataset.i"
+	@echo "... dataset.s"
+	@echo "... frontend.o"
+	@echo "... frontend.i"
+	@echo "... frontend.s"
 	@echo "... visual_odometry.o"
 	@echo "... visual_odometry.i"
 	@echo "... visual_odometry.s"
