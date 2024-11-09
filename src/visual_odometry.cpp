@@ -15,9 +15,9 @@ bool VisualOdometry::Init() {
 
     // create components and links
     // 创建组件和链接
-    // frontend_ = Frontend::Ptr(new Frontend);
-    // backend_ = Backend::Ptr(new Backend);
-    // map_ = Map::Ptr(new Map);
+    frontend_ = Frontend::Ptr(new Frontend);
+    backend_ = Backend::Ptr(new Backend);
+    map_ = Map::Ptr(new Map);
     // viewer_ = Viewer::Ptr(new Viewer);
 
     // frontend_->SetBackend(backend_);

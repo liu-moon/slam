@@ -4,6 +4,8 @@ add_library(myslam SHARED
         dataset.cpp
         camera.cpp
         frontend.cpp
+        backend.cpp
+        map.cpp
         )
 
 target_link_libraries(myslam

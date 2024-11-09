@@ -4,6 +4,8 @@
 #include "myslam/common_include.h"
 #include "myslam/dataset.h"
 #include "myslam/frontend.h"
+#include "myslam/backend.h"
+#include "myslam/map.h"
 
 class VisualOdometry
 {
@@ -26,4 +28,7 @@ private:
 
     // dataset
     Dataset::Ptr dataset_ = nullptr;
+    Frontend::Ptr frontend_ = nullptr;
+    Backend::Ptr backend_ = nullptr;
+    Map::Ptr map_ = nullptr;
 };
