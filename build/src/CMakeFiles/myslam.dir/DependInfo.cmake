@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/liuiu/桌面/slam/src/config.cpp" "src/CMakeFiles/myslam.dir/config.cpp.o" "gcc" "src/CMakeFiles/myslam.dir/config.cpp.o.d"
   "/home/liuiu/桌面/slam/src/visual_odometry.cpp" "src/CMakeFiles/myslam.dir/visual_odometry.cpp.o" "gcc" "src/CMakeFiles/myslam.dir/visual_odometry.cpp.o.d"
   )
 

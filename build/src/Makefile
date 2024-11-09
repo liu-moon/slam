@@ -130,6 +130,30 @@ myslam/fast:
 	cd /home/liuiu/桌面/slam/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/myslam.dir/build.make src/CMakeFiles/myslam.dir/build
 .PHONY : myslam/fast
 
+config.o: config.cpp.o
+.PHONY : config.o
+
+# target to build an object file
+config.cpp.o:
+	cd /home/liuiu/桌面/slam/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/myslam.dir/build.make src/CMakeFiles/myslam.dir/config.cpp.o
+.PHONY : config.cpp.o
+
+config.i: config.cpp.i
+.PHONY : config.i
+
+# target to preprocess a source file
+config.cpp.i:
+	cd /home/liuiu/桌面/slam/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/myslam.dir/build.make src/CMakeFiles/myslam.dir/config.cpp.i
+.PHONY : config.cpp.i
+
+config.s: config.cpp.s
+.PHONY : config.s
+
+# target to generate assembly for a file
+config.cpp.s:
+	cd /home/liuiu/桌面/slam/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/myslam.dir/build.make src/CMakeFiles/myslam.dir/config.cpp.s
+.PHONY : config.cpp.s
+
 visual_odometry.o: visual_odometry.cpp.o
 .PHONY : visual_odometry.o
 
@@ -163,6 +187,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... myslam"
+	@echo "... config.o"
+	@echo "... config.i"
+	@echo "... config.s"
 	@echo "... visual_odometry.o"
 	@echo "... visual_odometry.i"
 	@echo "... visual_odometry.s"
