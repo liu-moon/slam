@@ -11,7 +11,7 @@ setup: clean
 
 # 编译
 build: setup
-	@cd build && cmake .. && make && cd ..
+	@cd build && cmake .. && make -j4 && cd ..
 
 # 默认执行编译
 all: build

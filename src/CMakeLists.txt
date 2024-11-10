@@ -6,6 +6,7 @@ add_library(myslam SHARED
         frontend.cpp
         backend.cpp
         map.cpp
+        viewer.cpp
         )
 
 target_link_libraries(myslam

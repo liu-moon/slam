@@ -18,7 +18,7 @@ bool VisualOdometry::Init() {
     frontend_ = Frontend::Ptr(new Frontend);
     backend_ = Backend::Ptr(new Backend);
     map_ = Map::Ptr(new Map);
-    // viewer_ = Viewer::Ptr(new Viewer);
+    viewer_ = Viewer::Ptr(new Viewer);
 
     // frontend_->SetBackend(backend_);
     // frontend_->SetMap(map_);

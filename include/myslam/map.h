@@ -9,7 +9,7 @@ class Map {
     // typedef std::unordered_map<unsigned long, MapPoint::Ptr> LandmarksType; // 地标类型
     // typedef std::unordered_map<unsigned long, Frame::Ptr> KeyframesType;    // 关键帧类型
 
-    Map() {}
+    Map();
 
 //     /// 增加一个关键帧
 //     void InsertKeyFrame(Frame::Ptr frame);

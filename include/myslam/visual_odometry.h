@@ -6,6 +6,7 @@
 #include "myslam/frontend.h"
 #include "myslam/backend.h"
 #include "myslam/map.h"
+#include "myslam/viewer.h"
 
 class VisualOdometry
 {
@@ -31,4 +32,5 @@ private:
     Frontend::Ptr frontend_ = nullptr;
     Backend::Ptr backend_ = nullptr;
     Map::Ptr map_ = nullptr;
+    Viewer::Ptr viewer_ = nullptr;
 };
