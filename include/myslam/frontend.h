@@ -2,8 +2,10 @@
 
 #include "myslam/common_include.h"
 #include <opencv2/features2d.hpp>
+#include "myslam/map.h"
 
 class Backend;
+// class Map;
 
 class Frontend
 {
@@ -15,6 +17,8 @@ public:
 
     void SetBackend(std::shared_ptr<Backend> backend) { backend_ = backend; }
 
+    void SetMap(Map::Ptr map) { map_ = map; }
+
 
 private:
     // params
@@ -25,6 +29,7 @@ private:
     int num_features_needed_for_keyframe_ = 80;
 
     std::shared_ptr<Backend> backend_ = nullptr;
+    Map::Ptr map_ = nullptr;
 
     // utilities
     cv::Ptr<cv::GFTTDetector> gftt_;  // feature detector in opencv
