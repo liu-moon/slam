@@ -6,6 +6,7 @@
 
 class Backend;
 // class Map;
+class Viewer;
 
 class Frontend
 {
@@ -19,6 +20,8 @@ public:
 
     void SetMap(Map::Ptr map) { map_ = map; }
 
+    void SetViewer(std::shared_ptr<Viewer> viewer) { viewer_ = viewer; }
+
 
 private:
     // params
@@ -30,6 +33,7 @@ private:
 
     std::shared_ptr<Backend> backend_ = nullptr;
     Map::Ptr map_ = nullptr;
+    std::shared_ptr<Viewer> viewer_ = nullptr;
 
     // utilities
     cv::Ptr<cv::GFTTDetector> gftt_;  // feature detector in opencv
