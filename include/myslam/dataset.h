@@ -12,6 +12,11 @@ public:
 
     bool Init();
 
+    Camera::Ptr GetCamera(int camera_id) const
+    {
+        return cameras_.at(camera_id);
+    }
+
 private:
     std::string dataset_path_;
     int current_image_index_ = 0;

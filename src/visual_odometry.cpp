@@ -23,7 +23,7 @@ bool VisualOdometry::Init() {
     frontend_->SetBackend(backend_);
     frontend_->SetMap(map_);
     frontend_->SetViewer(viewer_);
-    // frontend_->SetCameras(dataset_->GetCamera(0), dataset_->GetCamera(1));
+    frontend_->SetCameras(dataset_->GetCamera(0), dataset_->GetCamera(1));
 
     // backend_->SetMap(map_);
     // backend_->SetCameras(dataset_->GetCamera(0), dataset_->GetCamera(1));

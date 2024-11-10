@@ -3,6 +3,7 @@
 #include "myslam/common_include.h"
 #include <opencv2/features2d.hpp>
 #include "myslam/map.h"
+#include "myslam/camera.h"
 
 class Backend;
 // class Map;
@@ -22,6 +23,11 @@ public:
 
     void SetViewer(std::shared_ptr<Viewer> viewer) { viewer_ = viewer; }
 
+    void SetCameras(Camera::Ptr left, Camera::Ptr right)
+    {
+        camera_left_ = left;
+        camera_right_ = right;
+    }
 
 private:
     // params
@@ -35,6 +41,9 @@ private:
     Map::Ptr map_ = nullptr;
     std::shared_ptr<Viewer> viewer_ = nullptr;
 
+    Camera::Ptr camera_left_ = nullptr;  // 左侧相机
+    Camera::Ptr camera_right_ = nullptr; // 右侧相机
+
     // utilities
-    cv::Ptr<cv::GFTTDetector> gftt_;  // feature detector in opencv
+    cv::Ptr<cv::GFTTDetector> gftt_; // feature detector in opencv
 };
