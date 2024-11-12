@@ -15,14 +15,39 @@ public:
     EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
     typedef std::shared_ptr<Frontend> Ptr;
 
+    /**
+     * @brief 前端构造函数
+     * 
+     */
     Frontend();
 
+    /**
+     * @brief 配置后端
+     * 
+     * @param backend 
+     */
     void SetBackend(std::shared_ptr<Backend> backend) { backend_ = backend; }
 
+    /**
+     * @brief 配置地图
+     * 
+     * @param map 
+     */
     void SetMap(Map::Ptr map) { map_ = map; }
 
+    /**
+     * @brief 配置viewer
+     * 
+     * @param viewer 
+     */
     void SetViewer(std::shared_ptr<Viewer> viewer) { viewer_ = viewer; }
 
+    /**
+     * @brief 配置左右目相机
+     * 
+     * @param left 
+     * @param right 
+     */
     void SetCameras(Camera::Ptr left, Camera::Ptr right)
     {
         camera_left_ = left;

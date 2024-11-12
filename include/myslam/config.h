@@ -4,7 +4,7 @@
 
 class Config {
 private:
-  static std::shared_ptr<Config> config_;
+  static std::shared_ptr<Config> config_;   // 静态成员变量
   cv::FileStorage file_; // cv::FileStorage：读写配置文件的类
 
   /**
@@ -24,12 +24,19 @@ public:
    * @brief 加载指定的配置文件
    * 
    * @param filename 
-   * @return true 
-   * @return false 
+   * @return true 文件存在
+   * @return false 文件不存在
    */
   static bool SetParameterFile(const std::string &filename);
 
-  // access the parameter values
+  
+  /**
+   * @brief 获取对应的配置参数
+   * 
+   * @tparam T 
+   * @param key 
+   * @return T 
+   */
   template <typename T> static T Get(const std::string &key) {
     return T(Config::config_->file_[key]);
   }

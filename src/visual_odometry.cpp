@@ -4,14 +4,18 @@
 VisualOdometry::VisualOdometry(std::string &config_path)
     : config_file_path_(config_path) {}
 
-bool VisualOdometry::Init() {
+bool VisualOdometry::Init()
+{
     // 读取配置文件
-    if (Config::SetParameterFile(config_file_path_) == false) {
+    // config为私有构造函数，为单例模式，可以直接调用Config::SetParameterFile
+    if (Config::SetParameterFile(config_file_path_) == false)
+    {
         return false;
     }
+    LOG(INFO) << Config::Get<std::string>("dataset_dir");
+    dataset_ = Dataset::Ptr(new Dataset(Config::Get<std::string>("dataset_dir"))); // 返回string类型的变量
 
-    dataset_ =  Dataset::Ptr(new Dataset(Config::Get<std::string>("dataset_dir"))); // 返回string类型的变量
-    CHECK_EQ(dataset_->Init(), true);   // CHECK_EQ 判断是否初始化成功
+    CHECK_EQ(dataset_->Init(), true); // CHECK_EQ 判断是否初始化成功
 
     // create components and links
     // 创建组件和链接
@@ -20,15 +24,18 @@ bool VisualOdometry::Init() {
     map_ = Map::Ptr(new Map);
     viewer_ = Viewer::Ptr(new Viewer);
 
-    frontend_->SetBackend(backend_);
-    frontend_->SetMap(map_);
-    frontend_->SetViewer(viewer_);
-    frontend_->SetCameras(dataset_->GetCamera(0), dataset_->GetCamera(1));
+    // 前端配置
+    frontend_->SetBackend(backend_);                                       // 配置后端
+    frontend_->SetMap(map_);                                               // 配置地图
+    frontend_->SetViewer(viewer_);                                         // viewer
+    frontend_->SetCameras(dataset_->GetCamera(0), dataset_->GetCamera(1)); // 配置相机
 
-    backend_->SetMap(map_);
-    backend_->SetCameras(dataset_->GetCamera(0), dataset_->GetCamera(1));
+    // 后端配置
+    backend_->SetMap(map_);                                               // 配置地图
+    backend_->SetCameras(dataset_->GetCamera(0), dataset_->GetCamera(1)); // 配置相机
 
-    viewer_->SetMap(map_);
+    // viewer配置
+    viewer_->SetMap(map_); // 配置地图
 
     return true;
 }

@@ -22,6 +22,12 @@ public:
      */
     VisualOdometry(std::string &config_path);
 
+    /**
+     * @brief 读取配置文件并创建其他关联的类
+     * 
+     * @return true 
+     * @return false 
+     */
     bool Init();
 
 private:

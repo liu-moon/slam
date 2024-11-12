@@ -3,6 +3,10 @@
 #include "myslam/common_include.h"
 #include "myslam/map.h"
 
+/**
+ * @brief 可视化
+ *
+ */
 class Viewer
 {
 public:
@@ -11,10 +15,17 @@ public:
 
     Viewer();
 
+    /**
+     * @brief 配置地图
+     * 
+     * @param map 
+     */
     void SetMap(Map::Ptr map) { map_ = map; }
 
 private:
-
     Map::Ptr map_ = nullptr;
 
+    std::thread viewer_thread_;
+
+    void ThreadLoop();
 };
