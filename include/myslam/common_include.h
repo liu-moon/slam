@@ -5,11 +5,13 @@
 #include <Eigen/Geometry>
 #include <iostream>
 #include <memory>
+#include <list>
+#include <condition_variable>
 
 // for cv
 #include <opencv2/core/core.hpp>
 
-// using cv::Mat;
+using cv::Mat;
 
 
 // glog
@@ -25,3 +27,7 @@ typedef Sophus::SO3d SO3;
 
 typedef Eigen::Matrix<double, 3, 3> Mat33;
 typedef Eigen::Matrix<double, 3, 1> Vec3;
+typedef Eigen::Matrix<double, 2, 1> Vec2;
+typedef Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> MatXX;
+typedef Eigen::Matrix<double, Eigen::Dynamic, 1> VecX;
+typedef Eigen::Matrix<double, 3, 4> Mat34;

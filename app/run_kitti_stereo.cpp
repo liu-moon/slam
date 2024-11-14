@@ -9,5 +9,7 @@ int main(int argc, char **argv)
     VisualOdometry::Ptr vo(
         new VisualOdometry(FLAGS_config_file));
     assert(vo->Init() == true);
+    vo->Run();
+    
     return 0;
 }

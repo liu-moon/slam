@@ -7,6 +7,7 @@
 #include "myslam/backend.h"
 #include "myslam/map.h"
 #include "myslam/viewer.h"
+#include "myslam/frame.h"
 
 class VisualOdometry
 {
@@ -29,6 +30,16 @@ public:
      * @return false 
      */
     bool Init();
+
+    void Run();
+
+    /**
+     * @brief 取数据集中的下一帧
+     * 
+     * @return true 
+     * @return false 
+     */
+    bool Step();
 
 private:
     std::string config_file_path_;

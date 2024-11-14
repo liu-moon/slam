@@ -214,3 +214,17 @@ todo
 
 
 
+```plantuml
+
+@startuml
+start
+:Parse Command Line Arguments;
+:Initialize VisualOdometry Object;
+if (Initialization Successful?) then (Yes)
+  :Run Visual Odometry;
+else (No)
+  stop
+endif
+stop
+@enduml
+```

@@ -1,5 +1,13 @@
 #pragma once
 
+#include "myslam/common_include.h"
+#include "myslam/feature.h"
+
+
+// forward declare
+struct MapPoint;
+struct Feature;
+
 struct Frame
 {
 public:

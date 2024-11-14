@@ -1,5 +1,7 @@
 #include "myslam/dataset.h"
 #include <fstream>
+#include <boost/format.hpp>
+#include <opencv2/opencv.hpp>
 
 using namespace std;
 
@@ -17,7 +19,7 @@ bool Dataset::Init() {
 
     for (int i = 0; i < 4; ++i) {
         char camera_name[3];
-        for (int k = 0; k < 3; ++k) {
+        for (int k = 0; k < 3; ++k) {   // 读取名称
             fin >> camera_name[k];
             LOG(INFO) << camera_name[k];
         }
@@ -37,6 +39,7 @@ bool Dataset::Init() {
         LOG(INFO) << "t = " << endl << t << endl;
         K = K * 0.5;
         LOG(INFO) << "K = " << endl << K << endl;
+        
         Camera::Ptr new_camera(new Camera(K(0, 0), K(1, 1), K(0, 2), K(1, 2),
                                           t.norm(), SE3(SO3(), t)));
         cameras_.push_back(new_camera);
@@ -45,4 +48,34 @@ bool Dataset::Init() {
     fin.close();
     current_image_index_ = 0;
     return true;
+}
+
+
+Frame::Ptr Dataset::NextFrame() {
+    boost::format fmt("%s/image_%d/%06d.png");  // 生成字符串
+    cv::Mat image_left, image_right;    // 左图 右图
+    // read images
+    image_left =
+        cv::imread((fmt % dataset_path_ % 0 % current_image_index_).str(),
+                   cv::IMREAD_GRAYSCALE);   // 以灰度模式加载图像 拼接路径
+    image_right =
+        cv::imread((fmt % dataset_path_ % 1 % current_image_index_).str(),
+                   cv::IMREAD_GRAYSCALE);
+
+    if (image_left.data == nullptr || image_right.data == nullptr) {    // 判断是否读到图像
+        LOG(WARNING) << "cannot find images at index " << current_image_index_;
+        return nullptr;
+    }
+
+    cv::Mat image_left_resized, image_right_resized;    // 缩放图像
+    cv::resize(image_left, image_left_resized, cv::Size(), 0.5, 0.5,
+               cv::INTER_NEAREST);  // 宽度方向缩放比例 高度方向缩放比例 最近邻插值
+    cv::resize(image_right, image_right_resized, cv::Size(), 0.5, 0.5,
+               cv::INTER_NEAREST);
+
+    auto new_frame = Frame::CreateFrame();
+    new_frame->left_img_ = image_left_resized;
+    new_frame->right_img_ = image_right_resized;
+    current_image_index_++;
+    return new_frame;
 }

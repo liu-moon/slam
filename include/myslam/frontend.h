@@ -4,6 +4,9 @@
 #include <opencv2/features2d.hpp>
 #include "myslam/map.h"
 #include "myslam/camera.h"
+#include "myslam/frame.h"
+
+enum class FrontendStatus { INITING, TRACKING_GOOD, TRACKING_BAD, LOST };
 
 class Backend;
 // class Map;
@@ -54,6 +57,9 @@ public:
         camera_right_ = right;
     }
 
+    
+    bool AddFrame(Frame::Ptr frame);
+
 private:
     // params
     int num_features_ = 200;
@@ -71,4 +77,21 @@ private:
 
     // utilities
     cv::Ptr<cv::GFTTDetector> gftt_; // feature detector in opencv
+
+    Frame::Ptr current_frame_ = nullptr;  // 当前帧
+    Frame::Ptr last_frame_ = nullptr;     // 上一帧
+
+    FrontendStatus status_ = FrontendStatus::INITING;
+
+    bool StereoInit();
+
+    bool Track();
+
+    bool Reset();
+
+    int DetectFeatures();
+
+    int FindFeaturesInRight();
+
+    bool BuildInitMap();
 };

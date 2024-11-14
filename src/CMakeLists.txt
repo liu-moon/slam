@@ -7,6 +7,8 @@ add_library(myslam SHARED
         backend.cpp
         map.cpp
         viewer.cpp
+        frame.cpp
+        mappoint.cpp
         )
 
 target_link_libraries(myslam

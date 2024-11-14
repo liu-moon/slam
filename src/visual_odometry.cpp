@@ -39,3 +39,28 @@ bool VisualOdometry::Init()
 
     return true;
 }
+
+void VisualOdometry::Run()
+{
+    while (1)
+    {
+        LOG(INFO) << "VO is running";
+        if (Step() == false)
+        {
+            break;
+        }
+    }
+}
+
+bool VisualOdometry::Step() {
+    Frame::Ptr new_frame = dataset_->NextFrame();
+    if (new_frame == nullptr) return false;
+
+    auto t1 = std::chrono::steady_clock::now();
+    bool success = frontend_->AddFrame(new_frame);
+    auto t2 = std::chrono::steady_clock::now();
+    auto time_used =
+        std::chrono::duration_cast<std::chrono::duration<double>>(t2 - t1);
+    LOG(INFO) << "VO cost time: " << time_used.count() << " seconds.";
+    return true;
+}

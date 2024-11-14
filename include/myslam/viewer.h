@@ -17,10 +17,14 @@ public:
 
     /**
      * @brief 配置地图
-     * 
-     * @param map 
+     *
+     * @param map
      */
     void SetMap(Map::Ptr map) { map_ = map; }
+
+    void AddCurrentFrame(Frame::Ptr current_frame);
+
+    void UpdateMap();
 
 private:
     Map::Ptr map_ = nullptr;
@@ -28,4 +32,14 @@ private:
     std::thread viewer_thread_;
 
     void ThreadLoop();
+
+    std::mutex viewer_data_mutex_;
+
+    Frame::Ptr current_frame_ = nullptr;
+
+    std::unordered_map<unsigned long, Frame::Ptr> active_keyframes_;
+
+    std::unordered_map<unsigned long, MapPoint::Ptr> active_landmarks_;
+
+    bool map_updated_ = false; // 地图更新状态
 };

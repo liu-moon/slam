@@ -1,5 +1,8 @@
 #pragma once
 
+#include "myslam/common_include.h"
+#include "myslam/feature.h"
+
 struct MapPoint {
    public:
     EIGEN_MAKE_ALIGNED_OPERATOR_NEW;    // 内存对齐
@@ -20,12 +23,12 @@ struct MapPoint {
         return pos_;
     }
 
-    void SetPos(const Vec3 &pos) {
-        std::unique_lock<std::mutex> lck(data_mutex_);
+    void SetPos(const Vec3 &pos) {  // 设置三维坐标
+        std::unique_lock<std::mutex> lck(data_mutex_);  // 函数退出自动解锁
         pos_ = pos;
     };
 
-    void AddObservation(std::shared_ptr<Feature> feature) {
+    void AddObservation(std::shared_ptr<Feature> feature) { // 添加观测
         std::unique_lock<std::mutex> lck(data_mutex_);
         observations_.push_back(feature);
         observed_times_++;

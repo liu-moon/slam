@@ -1,6 +1,7 @@
 #pragma once
 #include "myslam/common_include.h"
 #include "myslam/camera.h"
+#include "myslam/frame.h"
 
 class Dataset
 {
@@ -22,6 +23,9 @@ public:
      * @return false 
      */
     bool Init();
+
+
+    Frame::Ptr NextFrame();
 
     /**
      * @brief 根据相机的id获取相机类

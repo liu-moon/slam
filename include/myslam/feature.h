@@ -1,5 +1,15 @@
 #pragma once
 
+#include "myslam/common_include.h"
+#include "myslam/frame.h"
+
+struct Frame;
+struct MapPoint;
+
+/**
+ * @brief 2D 特征点类 todo：在三角化之后会被关联一个地图点
+ * 
+ */
 struct Feature {
    public:
     EIGEN_MAKE_ALIGNED_OPERATOR_NEW;    // 内存对齐
